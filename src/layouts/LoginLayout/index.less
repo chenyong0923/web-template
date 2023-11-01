@@ -1,0 +1,77 @@
+.g-login-layout {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  height: 100vh;
+  min-height: 790px;
+  overflow-y: auto;
+
+  &-left {
+    position: relative;
+    height: 100%;
+    background-color: #fafaff;
+    height: 100%;
+
+    &-title {
+      position: absolute;
+      top: 36px;
+      left: 32px;
+
+      &-logo {
+        width: 64px;
+        height: 64px;
+      }
+
+      &-name {
+        font-size: 36px;
+        color: #000000;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+    }
+
+    &-content {
+      position: absolute;
+      left: 50%;
+      top: 127px;
+      transform: translateX(-50%);
+
+      &-img {
+        width: 508px;
+        height: 520px;
+      }
+
+      &-slogan {
+        font-size: 20px;
+        color: #7c7c7c;
+        text-align: center;
+        line-height: 28px;
+        font-weight: 500;
+
+        > p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-icp {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 520px;
+    height: 100%;
+
+    &-content {
+      width: 360px;
+      padding: 24px 0;
+    }
+  }
+}

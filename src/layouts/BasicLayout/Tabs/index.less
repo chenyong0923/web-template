@@ -1,0 +1,63 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 4px;
+}
+
+.header {
+  flex-shrink: 0;
+  height: 38px;
+
+  :global {
+    .ant-tabs-nav {
+      margin-bottom: 0;
+      &::before {
+        border-bottom: none;
+      }
+
+      .ant-tabs-tab {
+        background-color: #fff !important;
+        border: none !important;
+
+        &:hover {
+          color: #000;
+        }
+
+        &-active {
+          background-color: #f9f9f9 !important;
+
+          .ant-tabs-tab-btn {
+            color: #000 !important;
+          }
+        }
+
+        & + .ant-tabs-tab {
+          margin-left: 0 !important;
+
+          &:not(.ant-tabs-tab-active):before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 14px;
+            background-color: #e0e0e0;
+          }
+        }
+      }
+
+      .ant-tabs-tab-active + .ant-tabs-tab {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+}

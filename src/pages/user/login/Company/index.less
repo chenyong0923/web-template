@@ -1,0 +1,54 @@
+.container {
+  .title {
+    font-size: 24px;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .desc {
+    font-size: 14px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 32px;
+  }
+
+  .list {
+    width: 100%;
+    max-height: 316px;
+    overflow-y: auto;
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 46px;
+      padding: 0px 20px;
+      overflow: hidden;
+
+      &-badge {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-right: 10px solid #1677ff;
+        border-bottom: 10px solid #1677ff;
+        border-top: 10px solid transparent;
+        border-left: 10px solid transparent;
+
+        &-icon {
+          position: absolute;
+          right: -10px;
+          bottom: -11px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 56px;
+  }
+}

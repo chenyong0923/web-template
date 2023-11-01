@@ -1,0 +1,52 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu {
+  flex: 1;
+  overflow-y: auto;
+
+  :global {
+    .ant-menu,
+    .ant-menu.ant-menu-inline-collapsed {
+      height: 100%;
+      width: 100%;
+      background: #f9f9f9;
+    }
+
+    .ant-menu-item .anticon {
+      font-size: 18px;
+    }
+    .ant-menu-submenu-title .ant-menu-item-icon {
+      font-size: 18px;
+    }
+
+    .ant-menu-item,
+    .ant-menu-submenu-title,
+    .ant-menu-inline .ant-menu-submenu-title,
+    .ant-menu-inline .ant-menu-item:not(:last-child),
+    .ant-menu-vertical .ant-menu-item:not(:last-child) {
+      margin-top: 0;
+    }
+
+    .ant-menu-item:after {
+      content: none;
+    }
+
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background-color: rgba(34, 40, 224, 0.08);
+    }
+  }
+}
+
+.actions {
+  flex-shrink: 0;
+  padding: 16px;
+
+  .btn {
+    font-size: 20px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,39 @@
+.m-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &-header {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    background: #f9f9f9;
+    padding: 0 16px;
+
+    &-title {
+      &-text {
+        font-family: PingFangSC-Medium;
+        font-size: 14px;
+        color: #000000;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .ant-spin-nested-loading {
+    flex: 1;
+  }
+
+  .ant-spin-container {
+    height: 100%;
+  }
+
+  &-body {
+    height: 100%;
+    padding: 16px;
+    overflow-y: auto;
+  }
+}
