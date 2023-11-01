@@ -14,7 +14,7 @@ uniubi-react-template/
 ├── mock // umi 存储 mock 文件，此目录下所有 js 和 ts 文件会被解析为 mock 文件
 ├── public // 此目录下所有文件会被 copy 到输出路径
 ├── src // 项目开发主目录
-│ ├── api // 定义接口，可使用 [end-type-to-front-type](http://npm.uniubi.com/-/web/detail/end-type-to-front-type) 生成接口在此目录下
+│ ├── api // 定义接口，可使用 [end-type-to-front-type](http://fe.lanseyizhan.com:4873/-/web/detail/@pangu/end-type-to-front-type) 生成接口在此目录下
 │ ├── assets // 静态资源
 │ │ ├── data
 │ │ │ ├── code.ts // 定义错误码，一般直接使用后端返回的错误信息
@@ -43,7 +43,7 @@ uniubi-react-template/
 ├── .env
 ├── .gitignore
 ├── .prettierignore
-├── moonPower.config.ts // [end-type-to-front-type](http://npm.uniubi.com/-/web/detail/end-type-to-front-type) 工具配置文件
+├── moonPower.config.ts // [end-type-to-front-type](http://fe.lanseyizhan.com:4873/-/web/detail/@pangu/end-type-to-front-type) 工具配置文件
 ├── package.json
 ├── tsconfig.json
 └── typings.d.ts
@@ -51,9 +51,9 @@ uniubi-react-template/
 
 ## 部署环境
 
-| 环境     | 指令                     | 服务器地址 | 访问地址                  |
-| -------- | ------------------------ | ---------- | ------------------------- |
-| 开发环境 | npm run build:test       | 0.0.0.0    | http://example.test       |
-| 测试环境 | npm run build:release    | 0.0.0.0    | http://example.release    |
-| 预发环境 | npm run build:pre        | 0.0.0.0    | http://example.pre        |
-| 生产环境 | npm run build:production | 0.0.0.0    | http://example.production |
+| 环境     | 指令                      | 服务器地址 | 访问地址                  | 账号 | 密码 |
+| -------- | ------------------------- | ---------- | ------------------------- | ---- | ---- |
+| 开发环境 | pnpm run build:test       | 0.0.0.0    | http://example.test       |      |      |
+| 测试环境 | pnpm run build:release    | 0.0.0.0    | http://example.release    |      |      |
+| 预发环境 | pnpm run build:pre        | 0.0.0.0    | http://example.pre        |      |      |
+| 生产环境 | pnpm run build:production | 0.0.0.0    | http://example.production |      |      |
