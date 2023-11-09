@@ -1,7 +1,6 @@
 import { Image, Space } from 'antd';
 import classnames from 'classnames';
 
-import ImageLogo from '@/assets/images/logo.png';
 import { User } from '@/components';
 
 import type { CSSProperties, FC, ReactNode } from 'react';
@@ -20,7 +19,7 @@ const prefixCls = 'm-layout-header';
 const LayoutHeader: FC<LayoutHeaderProps> = ({
   className,
   style,
-  logo = ImageLogo,
+  logo = 'https://front.lanseyizhan.com/public/logo.png',
   title = '酒工哥用工',
 }) => {
   return (
@@ -29,6 +28,8 @@ const LayoutHeader: FC<LayoutHeaderProps> = ({
         <Image
           wrapperClassName={`${prefixCls}-logo`}
           src={logo}
+          width={40}
+          height={40}
           preview={false}
         />
         <h1 className={`${prefixCls}-title`}>{title}</h1>
