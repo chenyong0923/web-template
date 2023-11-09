@@ -27,8 +27,8 @@
     ]
   },
   "dependencies": {
-    "@pangu/icons-react": "^1.1.0",
-    "@pangu/materials": "^1.3.4",
+    "@pangu/icons-react": "^1.2.0",
+    "@pangu/materials": "^1.6.4",
     "@pangu/utils": "^1.0.1",
     "ahooks": "^3.7.8",
     "antd": "^5.10.2",
