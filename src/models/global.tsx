@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { SessionStorageKey, StorageUtils } from '@/utils';
+import { SessionStorageKeyEnum, StorageUtils } from '@/utils';
 
 import type { MenuItem, Route } from '@/interfaces/route';
 
@@ -14,7 +14,7 @@ export default function useGlobalModel() {
   useEffect(() => {
     // 从本地持久化中获取历史路由栈
     const _historyStack = StorageUtils.getSessionStorage(
-      SessionStorageKey.HistoryStack,
+      SessionStorageKeyEnum.HistoryStack,
     );
     if (_historyStack) {
       changeHistoryStack(JSON.parse(_historyStack));
@@ -26,7 +26,7 @@ export default function useGlobalModel() {
     setHistoryStack(stack);
     // 存到本地持久化
     StorageUtils.setSessionStorage(
-      SessionStorageKey.HistoryStack,
+      SessionStorageKeyEnum.HistoryStack,
       JSON.stringify(stack),
     );
   };
@@ -35,7 +35,8 @@ export default function useGlobalModel() {
   const pushHistory = (route: MenuItem) => {
     const { children, icon, ...rest } = route;
     const prevStack: Route[] = JSON.parse(
-      StorageUtils.getSessionStorage(SessionStorageKey.HistoryStack) || '[]',
+      StorageUtils.getSessionStorage(SessionStorageKeyEnum.HistoryStack) ||
+        '[]',
     );
     const index = prevStack.findIndex((s) => s.path === rest.path);
     // 如果已存在，不再添加, 把已有路由的search参数更新

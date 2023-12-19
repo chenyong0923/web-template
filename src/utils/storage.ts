@@ -9,7 +9,7 @@ export enum CookieKeyEnum {
   Token = 'c_token',
 }
 
-export enum SessionStorageKey {
+export enum SessionStorageKeyEnum {
   HistoryStack = 's_history_stack',
 }
 
@@ -61,7 +61,7 @@ class StorageUtils {
    * @param key 键名
    * @returns 值
    */
-  static getSessionStorage(key: SessionStorageKey) {
+  static getSessionStorage(key: SessionStorageKeyEnum) {
     const _key = this.encode(key);
     const value = sessionStorage.getItem(_key);
     return value ? this.decode(value) : value;
@@ -72,7 +72,7 @@ class StorageUtils {
    * @param key 键名
    * @param value 值
    */
-  static setSessionStorage(key: SessionStorageKey, value: any) {
+  static setSessionStorage(key: SessionStorageKeyEnum, value: any) {
     const _key = this.encode(key);
     const _value = this.encode(value);
     sessionStorage.setItem(_key, _value);
@@ -82,7 +82,7 @@ class StorageUtils {
    * 移除 SessionStorage 存储的值
    * @param key 键名
    */
-  static removeSessionStorage(key: SessionStorageKey) {
+  static removeSessionStorage(key: SessionStorageKeyEnum) {
     const _key = this.encode(key);
     sessionStorage.removeItem(_key);
   }

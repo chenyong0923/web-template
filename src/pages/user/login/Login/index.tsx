@@ -1,5 +1,5 @@
 import { VerificationCodeButton } from '@pangu/materials';
-import { Checker } from '@pangu/utils';
+import { Checker, EnumUtil } from '@pangu/utils';
 import { history, useRequest } from '@umijs/max';
 import {
   Button,
@@ -21,7 +21,7 @@ import {
   getBasicOutCodeLogin,
 } from '@/api';
 import { Captcha, FormList } from '@/components';
-import { CookieKeyEnum, encode, EnumUtils, StorageUtils } from '@/utils';
+import { CookieKeyEnum, encode, StorageUtils } from '@/utils';
 
 import styles from './index.less';
 import QrCode from './QrCode';
@@ -42,7 +42,7 @@ enum TabsEnum {
   '验证码登录' = 'validate_code',
 }
 
-const tabs = EnumUtils.toList(TabsEnum);
+const tabs = EnumUtil.toList(TabsEnum);
 // 手机号校验正则
 const phoneRegExp = new Checker('phone').getRegExp();
 

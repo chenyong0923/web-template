@@ -1,14 +1,17 @@
+import { ProTableUtil } from '@pangu/materials';
 import { Checker } from '@pangu/utils';
 import { history } from '@umijs/max';
 import CryptoJS from 'crypto-js';
 
-import StorageUtils, { CookieKeyEnum, SessionStorageKey } from './storage';
+import StorageUtils, { CookieKeyEnum, SessionStorageKeyEnum } from './storage';
 
 import type { Route } from '@/interfaces/route';
 import type { ReactNode } from 'react';
 
-export { default as EnumUtils } from './enum';
-export { CookieKeyEnum, SessionStorageKey, StorageUtils };
+const proTableUtil = new ProTableUtil();
+
+export { proTableUtil };
+export { CookieKeyEnum, SessionStorageKeyEnum, StorageUtils };
 
 export interface MenuItem extends Omit<Route, 'icon'> {
   children?: MenuItem[];
@@ -80,18 +83,4 @@ export const encode = (type: 'md5', value: any) => {
 export const isUrl = (str: string) => {
   const urlChecker = new Checker('url');
   return urlChecker.test(str);
-};
-
-/**
- * 解析 json 字符串
- * @param str json 字符串
- * @param defaultValue 解析失败默认值
- * @returns json
- */
-export const parseJson = <T>(str: string, defaultValue: T = [] as any): T => {
-  try {
-    return str ? JSON.parse(str) : defaultValue;
-  } catch (err) {
-    return defaultValue;
-  }
 };
