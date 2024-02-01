@@ -9,11 +9,15 @@
   overflow-y: auto;
 
   :global {
-    .ant-menu,
-    .ant-menu.ant-menu-inline-collapsed {
+    .ant-menu {
       height: 100%;
       width: 100%;
       background: #f9f9f9;
+
+      &.ant-menu-root.ant-menu-inline,
+      &.ant-menu-root.ant-menu-inline-collapsed {
+        border-inline-end: none;
+      }
     }
 
     .ant-menu-item .anticon {
