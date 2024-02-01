@@ -4,7 +4,7 @@ import routes from '../src/routes';
 
 export default defineConfig({
   title: '项目模版', // TODO: 修改项目名称
-  favicons: ['https://front.lanseyizhan.com/public/favicon.ico'],
+  favicons: ['https://front.jiuworker.com/public/favicon.ico'],
   publicPath: '/',
   hash: true,
   antd: {},

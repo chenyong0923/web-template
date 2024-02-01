@@ -14,7 +14,7 @@ uniubi-react-template/
 ├── mock // umi 存储 mock 文件，此目录下所有 js 和 ts 文件会被解析为 mock 文件
 ├── public // 此目录下所有文件会被 copy 到输出路径
 ├── src // 项目开发主目录
-│ ├── api // 定义接口，可使用 [end-type-to-front-type](http://fe.lanseyizhan.com:4873/-/web/detail/@pangu/end-type-to-front-type) 生成接口在此目录下
+│ ├── api // 定义接口，可使用 [end-type-to-front-type](http://fe.jiuworker.com:4873/-/web/detail/@pangu/end-type-to-front-type) 生成接口在此目录下
 │ ├── assets // 静态资源
 │ │ ├── data
 │ │ │ ├── code.ts // 定义错误码，一般直接使用后端返回的错误信息
@@ -43,7 +43,7 @@ uniubi-react-template/
 ├── .env
 ├── .gitignore
 ├── .prettierignore
-├── moonPower.config.ts // [end-type-to-front-type](http://fe.lanseyizhan.com:4873/-/web/detail/@pangu/end-type-to-front-type) 工具配置文件
+├── moonPower.config.ts // [end-type-to-front-type](http://fe.jiuworker.com:4873/-/web/detail/@pangu/end-type-to-front-type) 工具配置文件
 ├── package.json
 ├── tsconfig.json
 └── typings.d.ts

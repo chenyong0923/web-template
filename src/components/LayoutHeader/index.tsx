@@ -19,7 +19,7 @@ const prefixCls = 'm-layout-header';
 const LayoutHeader: FC<LayoutHeaderProps> = ({
   className,
   style,
-  logo = 'https://front.lanseyizhan.com/public/logo.png',
+  logo = 'https://front.jiuworker.com/public/logo.png',
   title = '酒工哥用工',
 }) => {
   return (

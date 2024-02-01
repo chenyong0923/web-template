@@ -2,7 +2,7 @@ import { defineConfig } from '@pangu/end-type-to-front-type';
 
 export default defineConfig([
   {
-    serverUrl: 'http://fe.lanseyizhan.com:3000/',
+    serverUrl: 'http://fe.jiuworker.com:3000/',
     typesOnly: false,
     prefix: '', // 路径前缀
     restful: true, // 是否是restful风格的接口
